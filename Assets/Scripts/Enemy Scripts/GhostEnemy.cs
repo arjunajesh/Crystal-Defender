@@ -77,6 +77,7 @@ public class GhostEnemy : MonoBehaviour
             CameraShaker.Instance.ShakeOnce(1.2f, 3f, .1f, 1f);
             Destroy(gameObject);
         }
+        
     }
     private void OnMouseUp()
     {
@@ -85,8 +86,9 @@ public class GhostEnemy : MonoBehaviour
         rb.velocity = new Vector3(throwVelocity.x * throwStrength, throwVelocity.y * throwStrength, 0);
         if (throwVelocity == new Vector3(0, 0, 0))
         {
-            isGrabbed = false;
+           // isGrabbed = false;
         }
+        isGrabbed = false;
     }
 
     private void OnCollisionEnter(Collision collision)
