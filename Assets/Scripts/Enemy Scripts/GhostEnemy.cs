@@ -99,20 +99,21 @@ public class GhostEnemy : MonoBehaviour
         }
         else if (collision.gameObject.CompareTag("Enemy") && throwVelocity != new Vector3(0, 0, 0) || isGrabbed == true)
         {
-
-            collision.gameObject.GetComponent<EnemyStats>().health -= damage;
+            Debug.Log("bruh");
+            //collision.gameObject.GetComponent<EnemyStats>().health -= damage;
             Debug.Log(collision.gameObject.GetComponent<EnemyStats>().damage);
             GetComponent<EnemyStats>().health -= collision.gameObject.GetComponent<EnemyStats>().damage;
 
         }
         else if (collision.gameObject.CompareTag("Boundary"))
         {
+            Debug.Log("hit the boundary");
             Destroy(gameObject);
         }
     }
     public void InvisibleHandler()
     {
-        Debug.Log("invisble handler");
+        //Debug.Log("invisble handler");
         if (isInvisible == false)
         {
             bc.enabled = false;
