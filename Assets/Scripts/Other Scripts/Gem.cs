@@ -14,6 +14,7 @@ public class Gem : MonoBehaviour
     public GameObject gem;
     public GameObject endGameUI;
     public GameObject lostText;
+    public GameObject mainMenuButton;
 
     void Start()
     {
@@ -30,6 +31,7 @@ public class Gem : MonoBehaviour
             Time.timeScale = 0f;
             endGameUI.SetActive(true);
             lostText.SetActive(true);
+            mainMenuButton.SetActive(true);
         }
         //transform.position = new Vector3 (-0.325F, Mathf.PingPong (Time.time * bounceSpeed, bounce), 1.867F);
     }

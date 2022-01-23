@@ -15,7 +15,7 @@ public class gameUIManager : MonoBehaviour
     {
         gameCam.DOLocalMove(new Vector3(0, -16, 0), 1f).SetDelay(1);
         pauseButton.DOAnchorPos(new Vector3(27, -28, 0), .5f).SetDelay(1);
-        scoreText.DOAnchorPos(new Vector3(0, 220, 0), .4f).SetDelay(1);
+        scoreText.DOAnchorPos(new Vector3(0, 150, 0), .4f).SetDelay(1);
     }
 
    
