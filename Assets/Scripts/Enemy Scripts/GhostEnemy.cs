@@ -102,7 +102,7 @@ public class GhostEnemy : MonoBehaviour
         else if (collision.gameObject.CompareTag("Enemy") && throwVelocity != new Vector3(0, 0, 0) || isGrabbed == true)
         {
             Debug.Log("bruh");
-            //collision.gameObject.GetComponent<EnemyStats>().health -= damage;
+            collision.gameObject.GetComponent<EnemyStats>().health -= damage;
             Debug.Log(collision.gameObject.GetComponent<EnemyStats>().damage);
             GetComponent<EnemyStats>().health -= collision.gameObject.GetComponent<EnemyStats>().damage;
 
